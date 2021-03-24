@@ -10,7 +10,7 @@ var formSubmitHandler = function(event) {
     // getting value from input element...
     var crypto = cryptoName.value.toLowerCase()
   
-    if (crypto) {
+    if (crypto !== "[]") {
       searchCrypto(crypto);
   
       // clearing old content...
@@ -37,7 +37,17 @@ var searchCrypto = function() {
        
       });
     });
-  };
+  }; 
+  // fetching the coinlist to learn to target only the crypto IDs...
+  var coinList = ("https://api.coingecko.com/api/v3/coins");
+  fetch(coinList)
+  .then(function(response) {
+    console.log(response);
+    response.json().then(function(data) {
+    var cryptoId = (JSON.stringify(data));
+    console.log(cryptoId);
+    });
+})
   
   searchCrypto(userSearch);
 
