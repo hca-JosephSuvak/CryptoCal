@@ -4,9 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/stylesheet.css" />
     <title>Document</title>
 </head>
+<!--Updating basic html to work with Server-side APIs better...-->
 <body>
+    <main class="flex-row justify-space-between">
+        <div class="col-12 col-md-4">
+          <div class="card">
+            <h3 class="card-header text-uppercase">Search Crypto</h3>
+            <form id="crypto-form" class="card-body">
+              <input name="crypto" id="crypto" type="text" autofocus="true" class="form-input"/>
+              <button type="submit" class="btn">Get Info</button>
+            </form>
+          </div>
+
+          <div class="col-12 col-md-8">
+            <h2 class="subtitle">Showing Results for: <span id="repo-search-term"></span></h2>
+            <div id="crypto-container" class=""></div>
     <script src="./assets/javascript/script.js"></script> 
 </body>
 </html>
