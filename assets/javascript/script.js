@@ -8,9 +8,11 @@ var formSubmitHandler = function(event) {
     event.preventDefault();
   
     // getting value from input element...
-    var crypto = cryptoName.value.toLowerCase()
+    var crypto = cryptoName.value.toLowerCase();
+
+    var emptyArray = "[]";
   
-    if (crypto !== "[]") {
+    if (crypto.length !== 0 || crypto.length !== emptyArray) {
       searchCrypto(crypto);
   
       // clearing old content...
@@ -18,7 +20,8 @@ var formSubmitHandler = function(event) {
       cryptoName.value = "";
       console.log(JSON.stringify(crypto));
     } else {
-      alert("Please enter a valid crypto");
+      //alert("Please enter a valid crypto");
+      console.log("not a valid crypto")
     }
   };
 
@@ -42,10 +45,15 @@ var searchCrypto = function() {
   var coinList = ("https://api.coingecko.com/api/v3/coins");
   fetch(coinList)
   .then(function(response) {
-    console.log(response);
+
     response.json().then(function(data) {
-    var cryptoId = (JSON.stringify(data));
+
+    var cryptoId = data[0];
     console.log(cryptoId);
+    
+    var cryptoPrice = data[0].market_data.current_price.usd;
+    console.log(cryptoPrice);
+
     });
 })
   
