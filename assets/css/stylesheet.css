@@ -1,4 +1,4 @@
-h1 {
+/* h1 {
     text-align: center;
  
  }
@@ -20,9 +20,9 @@ h1 {
      border-width: 1px;
      border-radius: 4px;
      width:65%;
-     /* ALIGN CONTENT LEFT */
+     ALIGN CONTENT LEFT */
  }
- .currency-1-btn {
+ /* .currency-1-btn {
      border-radius:4px;
      border-width:1px;
      width: 73%;
@@ -77,7 +77,7 @@ h1 {
      background-color:white;
      min-width: 65%;
      box-shadow: 0px 8px 16px 0px rgba(235, 235, 235, 0.863);
-     /* z-index: 1; */
+     z-index: 1;
  }
  
  .currency-2-content a {
@@ -91,4 +91,68 @@ h1 {
  
  .currency-2-drop:hover .currency-2-content{
      display: block;
+ } */
+ * {
+     margin:0;
+     box-sizing: border-box;
  }
+ 
+ body {
+     font-family: "Roboto", sans-serif;
+     background: #f7f5ff;
+ }
+
+ h2 {
+     margin: 16px;
+ }
+ 
+ .container {
+     margin-top: 100px;
+     padding: 32px;
+      }
+
+.selector-box {
+    display: flex;
+    width: 400px;
+}
+
+.select-box .options-container {
+    background: #2f3648;
+    color: #f5f6fa;
+    /* max-height:0; */
+    width:100%;
+    /* opacity: 0; */
+    transition: all 0.4s;
+    border-radius: 8px;
+    overflow: hidden;   
+}
+
+.select-box .options-container.active {
+    max-height: 240px;
+    opacity: 1;
+    overflow-y: scroll;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+    width: 8px;
+    background: #0d141f;
+    border-radius: 0 8px 8px 0;
+}
+
+.select-box .option, 
+.selected {
+    padding: 12px 24px;
+    cursor: pointer;    
+}
+
+.select-box .option:hover {
+    background: #414b57;
+}
+
+.select-box label {
+    cursor:pointer;
+}
+
+.select-box .option .radio {
+    display:none;
+}
