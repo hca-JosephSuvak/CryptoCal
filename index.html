@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylsheet" href="assets/css/stylesheet.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/stylesheet.css" />
     <title>CryptoCal</title>
 </head>
 <!--Updating basic html to work with Server-side APIs better...-->
 <body>
-
-  /*  <main class="flex-row justify-space-between">
-        <div class="col-12 col-md-4">
-          <div class="card">
-            <h3 class="card-header text-uppercase">Search Crypto</h3>
-            <form id="crypto-form" class="card-body">
-              <input name="crypto" id="crypto" type="text" autofocus="true" class="form-input"/>
-              <button type="submit" class="btn">Get Info</button>
-            </form>
-          </div>
-
-          <div class="col-12 col-md-8">
-            <h2 class="subtitle">Showing Results for: <span id="repo-search-term"></span></h2>
-            <div id="crypto-container" class=""></div>
-    <script src="./assets/javascript/script.js"></script> */
-            
-    <h1>Welcome to CryptoCal!!!</h1>
-    <div>
-        <h2>Convert BTC to USD</h2>
-        <div> 
-            <input type="search" class="figure-to-convert"></input>
-        </div>
-        <div class="currency-1-drop">
-            <button class="currency-1-btn">Choose Your Currency</button>
-            <div class="currency-1-content">
-                <a href="#">Bitcoin</a>
-                <a href="#">USD</a>
-                <a href="#">Binance</a>
-                <a href="#">Ethereum</a>
-            </div>
-        </div>
-        <img type="image" src="Conversion-Swap.png" style="width: 15px; height: 15px;"></img>
-        <div> 
-        </div>
-        <div class="currency-2-drop">
-            <button class="currency-2-btn">Choose Your Currency</button>
-            <div class="currency-2-content">
-                <a href="#">Bitcoin</a>
-                <a href="#">USD</a>
-                <a href="#">Binance</a>
-                <a href="#">Ethereum</a>
+    <div class="container">
+        <h2>Currency Category</h2>
+        <div class="select-box">
+            <div class="options-container active" class="option" id="fromCurrency">
+                <!--Updating-->
+                <label for="currency-type-1">Choose a main currency</label>
+                <select name= "currency-type-1" class="selected">
+                    Select Currency type
+                    <option value="USD" id="USD">
+                        USD
+                    </option>
+                    <option value="EUR" id="EUR">
+                        EUR
+                    </option>
+                    <option value="CAD" id="CAD">
+                        CAD
+                    </option>
+                    <option value="BTC" id="BTC">
+                        Bitcoin
+                    </option>
+                    <option value="Ethereum" id="Ethereum">
+                        Ethereum
+                    </option>
+                    <option value="Binance" id="Binance">
+                        Binance
+                    </option>
+                </select>
+                <label for="currency-type-2">Choose a second currency</label>
+                <select name= "currency-type-2" class="selected" id="toCurrency">
+                    Select Currency type
+                    <option value="USD" id="USD">
+                        USD
+                    </option>
+                    <option value="EUR" id="EUR">
+                        EUR
+                    </option>
+                    <option value="CAD" id="CAD">
+                        CAD
+                    </option>
+                    <option value="BTC" id="BTC">
+                        Bitcoin
+                    </option>
+                    <option value="Ethereum" id="Ethereum">
+                        Ethereum
+                    </option>
+                    <option value="Binance" id="Binance">
+                        Binance
+                    </option>
+                </select>
             </div>
         </div>
     </div>
-<script src="./assets/javascript/script.js"></script> 
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="./assets/javascript/script.js"></script>
 </body>
 </html>
