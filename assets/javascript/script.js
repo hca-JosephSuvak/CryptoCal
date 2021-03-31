@@ -12,7 +12,7 @@ var formSubmitHandler = function (event) {
 
   const emptyArray = [];
 
-  if (crypto.length !== 0 || crypto === "") {
+  if (crypto.length > 0) {
     searchCrypto(crypto);
 
     // clearing old content...
@@ -20,9 +20,9 @@ var formSubmitHandler = function (event) {
     cryptoName.value = "";
     console.log(JSON.stringify(crypto));
   } else {
-    alert("Please enter a valid crypto");
-    alert("Not a valid crypto, try again!")
-    console.log("not a valid crypto")
+    //alert("Please enter a valid crypto");
+    //alert("Not a valid crypto, try again!")
+    //console.log("not a valid crypto")
   }
 };
 
