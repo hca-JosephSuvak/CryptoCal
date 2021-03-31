@@ -57,7 +57,8 @@ var searchCrypto = function() {
     });
 })
   
-  searchCrypto(userSearch);
+
+searchCrypto(userSearch);
 
 
-  userSearch.addEventListener("submit", formSubmitHandler);
+userSearch.addEventListener("submit", formSubmitHandler);
